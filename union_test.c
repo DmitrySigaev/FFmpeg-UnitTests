@@ -9,12 +9,7 @@
 #include <libavcodec/packet.h>
 #include <libavutil/intreadwrite.h>
 
-// Temporary typedef to simplify porting all AVBufferRef users to size_t
-#if FF_API_BUFFER_SIZE_T
-typedef int buffer_size_t;
-#else
-typedef size_t buffer_size_t;
-#endif
+#include "internal.h"
 
 # if 0
 typedef struct stat_type {
